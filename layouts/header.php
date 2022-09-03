@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg text-bg-dark shadow">
         <div class="container ">
-            <a class="navbar-brand h1 mb-0" href="#">Reddoorz</a>
+            <a class="navbar-brand h1 mb-0" href="<?= base_url() ?>">Reddoorz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

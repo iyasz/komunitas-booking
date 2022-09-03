@@ -11,13 +11,19 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        .header h3 {
+            font-weight: lighter;
+            letter-spacing: 0.9px;
+        }
+    </style>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="card">
                     <div class="card-body">
                         <form action="" method="post">
-                            <div class="header mb-4">
+                            <div class="header mb-4 text-center">
                                 <h3>Sign In To Reddoorz</h3>
                             </div>
                             <label for="">Username</label>
