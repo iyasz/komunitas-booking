@@ -13,7 +13,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg text-bg-dark shadow">
+    <style>
+        .navbar {
+            z-index: 3;
+        }
+    </style>
+    <div class=" position-fixed top-0 start-0 end-0  navbar navbar-dark navbar-expand-lg text-bg-dark shadow">
         <div class="container ">
             <a class="navbar-brand h1 mb-0" href="<?= base_url() ?>">Reddoorz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,4 +31,4 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </div>

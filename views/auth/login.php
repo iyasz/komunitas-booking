@@ -16,10 +16,14 @@
             font-weight: lighter;
             letter-spacing: 0.9px;
         }
+        .row {
+            position: relative;
+            top: 70px;
+        }
     </style>
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-7">
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <form action="" method="post">
@@ -27,7 +31,7 @@
                                 <h3>Sign In To Reddoorz</h3>
                             </div>
                             <label for="">Username</label>
-                            <input type="text" name="username" class="form-control" placeholder="Masukkan Username">
+                            <input type="text" autocomplete="off"  name="username" class="form-control" placeholder="Masukkan Username">
                         </form>
                     </div>
                 </div>
