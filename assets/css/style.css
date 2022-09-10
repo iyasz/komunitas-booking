@@ -37,6 +37,9 @@ body {
 .fs-sm{
     font-size: 13px;
 }
+.form-control{
+    border-radius: 2px;
+}
 .form-control:focus{
     box-shadow: none;
 }
