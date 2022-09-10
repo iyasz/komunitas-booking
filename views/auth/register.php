@@ -19,7 +19,7 @@
                             <input type="password" id="pww" required name="re_password" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-primary mb-3">Daftar</button>
-                        <p class="text-center">Already have an account? <a class="text-decoration-none" href="index.php?page=login">Login</a></p>
+                        <p class="text-center fs-sm">Already have an account? <a class="text-decoration-none" href="index.php?page=login">Login</a></p>
                     </form>
                 </div>
             </div>

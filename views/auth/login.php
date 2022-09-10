@@ -16,7 +16,7 @@
 
                         <button type="submit" class="btn btn-primary mb-3">Daftar</button>
 
-                        <p class="text-center fs-sm">Don't have an account? <a class="text-decoration-none" href="index.php?page=register">Masuk</a></p>
+                        <p class="text-center fs-sm">Don't have an account? <a class="text-decoration-none" href="index.php?page=register">Register</a></p>
                     </form>
                 </div>
             </div>
