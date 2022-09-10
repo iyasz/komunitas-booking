@@ -1,7 +1,7 @@
 <div class="container mt6">
     <div class="row justify-content-center">
         <div class="col-lg-5">
-            <div class="card shadow">
+            <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="fw-600 mb-4 text-center">Log In ke Travelokapala </h5>
                     <form action="" method="post">
