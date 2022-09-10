@@ -8,7 +8,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hotel Booking</title>
+    <link rel="shortcut icon" href="<?= base_url() ?>/assets/img/logo/favicon.png">
+    <title>Travelokapala - <?= isset($title) ? $title : 'Pergi Ke Tempat Impian Anda Bersama Kami!' ?></title>
     <link rel="stylesheet" href="<?= base_url() ?>/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
 </head>
@@ -19,9 +20,9 @@
             z-index: 3;
         }
     </style>
-    <div class=" position-fixed top-0 start-0 end-0  navbar navbar-dark navbar-expand-lg text-bg-dark shadow">
+    <div class=" position-fixed top-0 start-0 end-0  navbar navbar-expand-lg text-bg-light shadow">
         <div class="container ">
-            <a class="navbar-brand h1 mb-0" href="<?= base_url() ?>">Reddoorz</a>
+            <a class="navbar-brand" href="<?= base_url() ?>"><img class="img-fluid gbr" src="<?= base_url() ?>/assets/img/logo/traveloka.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

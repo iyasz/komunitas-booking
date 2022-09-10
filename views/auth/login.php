@@ -1,42 +1,26 @@
-<?php 
+<?php $title = 'Login'; ?>
+<div class="container mt6">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="fw-600 mb-4">Log In ke Travelokapala </h5>
+                    <form action="" method="post">
+                        <div class="mb-3">
+                            <label for="email" class="">Email</label>
+                            <input type="text" required id="email" class="form-control" name="email" autocomplete="off" placeholder="example@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pw" class="form-label">Password</label>
+                            <input type="password" id="pw" required name="password" class="form-control">
+                        </div>
 
-?>
+                        <button type="submit" class="btn btn-primary mb-3">Daftar</button>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <style>
-        .header h3 {
-            font-weight: lighter;
-            letter-spacing: 0.9px;
-        }
-        .row {
-            position: relative;
-            top: 70px;
-        }
-    </style>
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <form action="" method="post">
-                            <div class="header mb-4 text-center">
-                                <h3>Sign In To Reddoorz</h3>
-                            </div>
-                            <label for="">Username</label>
-                            <input type="text" autocomplete="off"  name="username" class="form-control" placeholder="Masukkan Username">
-                        </form>
-                    </div>
+                        <p class="text-center">Don't have an account? <a class="text-decoration-none" href="index.php?page=register">Masuk</a></p>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</body>
-</html>
+</div>
