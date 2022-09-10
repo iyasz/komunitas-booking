@@ -34,3 +34,9 @@ body {
 .mt6{
     margin-top: 120px ;
 }
+.fc:focus{
+    box-shadow: none;
+}
+.shadow-sm{
+    box-shadow: 0 2rem .25rem rgba(0,0,0,.1) !important;
+}
