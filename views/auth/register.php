@@ -1,4 +1,3 @@
-<?php $title = 'Register'; ?>
 
 <div class="container mt6">
     <div class="row justify-content-center">

@@ -1,5 +1,15 @@
 <?php
 
+$page = isset($_GET['page']) ? $_GET['page'] : '';
+
+if($page == 'login'){
+    $title = "Login";
+}elseif($page == 'register'){
+    include "views/auth/register.php";
+    $title = "Register";
+}
+
+
 ?>
 
 <!doctype html>
