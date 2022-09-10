@@ -7,16 +7,16 @@
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="email" class="">Email</label>
-                            <input type="text" required id="email" class="form-control fc" name="email" autocomplete="off" placeholder="example@gmail.com">
+                            <input type="text" required id="email" class="form-control" name="email" autocomplete="off" placeholder="example@gmail.com">
                         </div>
                         <div class="mb-3">
                             <label for="pw" class="form-label">Password</label>
-                            <input type="password" id="pw" required name="password" class="form-control fc">
+                            <input type="password" id="pw" required name="password" class="form-control">
                         </div>
 
                         <button type="submit" class="btn btn-primary mb-3">Daftar</button>
 
-                        <p class="text-center">Don't have an account? <a class="text-decoration-none" href="index.php?page=register">Masuk</a></p>
+                        <p class="text-center fs-sm">Don't have an account? <a class="text-decoration-none" href="index.php?page=register">Masuk</a></p>
                     </form>
                 </div>
             </div>

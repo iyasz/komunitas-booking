@@ -32,11 +32,14 @@ body {
     box-shadow: none;
 }
 .mt6{
-    margin-top: 120px ;
+    margin-top: 120px;
 }
-.fc:focus{
+.fs-sm{
+    font-size: 12px;
+}
+.form-control:focus{
     box-shadow: none;
 }
 .shadow-sm{
-    box-shadow: 0 2rem .25rem rgba(0,0,0,.1) !important;
+    box-shadow: 0px 5px 30px -4px rgba(0,0,0,0.1) !important;
 }
