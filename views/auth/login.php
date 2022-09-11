@@ -8,21 +8,17 @@
                     <form action="" method="post">
                         <div class="mb-3">
                             <div class="input-group">
-                                <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class='bx bx-user'></i>
                                     </span>
-                                </div>
                                 <input type="text" autocomplete="off" class="form-control" name="email" placeholder="Masukan Email" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="input-group">
-                                <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class='bx bx-lock-alt'></i>
                                     </span>
-                                </div>
                                 <input type="password" class="form-control" placeholder="Password" required name="password">
                             </div>
                         </div>

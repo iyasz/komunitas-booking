@@ -2,6 +2,9 @@
 //helper
 include 'app/function.php';
 
+//title
+include 'app/title.php';
+
 //header
 include 'layouts/header.php';
 
