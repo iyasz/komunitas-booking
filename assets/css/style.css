@@ -43,6 +43,7 @@ body {
 }
 .form-control{
     border-radius: 2px;
+    background-color: #E8EFF7;
 }
 .form-control:focus{
     box-shadow: none;
