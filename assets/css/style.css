@@ -32,10 +32,14 @@ body {
     box-shadow: none;
 }
 .mt6{
-    margin-top: 120px;
+    margin-top: 150px;
 }
 .fs-sm{
     font-size: 13px;
+}
+.fs-6{
+    font-size: 16px;
+    letter-spacing: 0.6px;
 }
 .form-control{
     border-radius: 2px;

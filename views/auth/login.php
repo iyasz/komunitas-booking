@@ -3,7 +3,8 @@
         <div class="col-lg-5">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <h5 class="fw-600 mb-4 text-center">Log In ke Travelokapala </h5>
+                    <h2 class="fw-700 fs-2">Selamat Datang, <br>Travelfamily !</h2>
+                    <h5 class="fw-600 mb-4 mt-3 fs-6 ">Petualangan baru telah menunggu <br>untuk kamu jelajahi</h5>
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="email" class="">Email</label>
