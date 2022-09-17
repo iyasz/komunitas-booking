@@ -10,33 +10,32 @@ $error = [];
 // }
 
 $errors = [
-    "email" => "Harap mengisi email",
-    "password" => "Harap mengisi password",
-    "re_password" => "Harap mengisi ulang password",
+    // "email" => "Harap mengisi email",
+    // "password" => "Harap mengisi password",
+    // "re_password" => "Harap mengisi ulang password",
 ];
 
 
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     //validation
-//     if (empty($_POST['email']) == TRUE) {
-//         $errors['email'] = "Harap Mengisi Email";
-//     }
-//     if (empty($_POST['password']) == TRUE) {
-//         $errors['password'] = "Harap Mengisi password";
-//     }
-//     if (empty($_POST['re_password']) == TRUE) {
-//         $errors['re_password'] = "Harap Mengisi ulang password";
-//     }
-//     var_dump($errors);
+if (isset($_POST['post_register'])) {
+    // $_SERVER['REQUEST_METHOD'] == 'POST'
+
+    //validation
+    if (empty($_POST['email']) == TRUE) {
+        $errors['email'] = "Harap Mengisi Email";
+    }
+    if (empty($_POST['password']) == TRUE) {
+        $errors['password'] = "Harap Mengisi password";
+    }
+    if (empty($_POST['re_password']) == TRUE) {
+        $errors['re_password'] = "Harap Mengisi ulang password";
+    }
 
 
-//     //insert
-//     $email = htmlspecialchars($_POST['email']);
-//     $password = htmlspecialchars($_POST['password']);
-//     $re_password = htmlspecialchars($_POST['re_password']);
-
-//     // var_dump($_POST);
-// }
+    //insert
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
+    $re_password = htmlspecialchars($_POST['re_password']);
+}
 
 
 
@@ -52,20 +51,20 @@ $errors = [
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="email" class="">Email</label>
-                            <input type="text" id="email" class="form-control is-invalid" name="email" autocomplete="off" placeholder="example@gmail.com">
+                            <input type="text" id="email" class="form-control <?= isset($errors['email']) ? 'is-invalid' : '' ?>" name="email" autocomplete="off" placeholder="example@gmail.com">
                             <div class="invalid-feedback"><?= $errors['email'] ?? ''; ?></div>
                         </div>
                         <div class="mb-3">
                             <label for="pw" class="form-label ">Password</label>
-                            <input type="password" id="pw" name="password" class="form-control is-invalid">
+                            <input type="password" id="pw" name="password" class="form-control <?= isset($errors['password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['password'] ?? ''; ?></div>
                         </div>
                         <div class="mb-3">
                             <label for="pww" class="form-label ">Confirm Password</label>
-                            <input type="password" id="pww" name="re_password" class="form-control is-invalid">
+                            <input type="password" id="pww" name="re_password" class="form-control <?= isset($errors['re_password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['re_password'] ?? ''; ?></div>
                         </div>
-                        <button type="submit" class="btn btn-primary mb-3">Daftar</button>
+                        <button type="submit" name="post_register" class="btn btn-primary mb-3 w-100">Daftar</button>
                         <p class="text-center fs-sm">Already have an account? <a class="text-decoration-none" href="index.php?page=login">Login</a></p>
                     </form>
                 </div>
