@@ -18,23 +18,39 @@ $errors = [
 
 if (isset($_POST['post_register'])) {
     // $_SERVER['REQUEST_METHOD'] == 'POST'
+    $user = $conn->query("SELECT * FROM users WHERE email = '$_POST[email]'");
+    var_dump($user);
+    die;
 
     //validation
     if (empty($_POST['email']) == TRUE) {
         $errors['email'] = "Harap Mengisi Email";
+    } elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == FALSE) {
+        $errors['email'] = "Email Tidak Valid";
+    } elseif (mysqli_num_rows($user) > 0) {
+        $errors['email'] = "Email Sudah Digunakan";
     }
+
     if (empty($_POST['password']) == TRUE) {
         $errors['password'] = "Harap Mengisi password";
+    } elseif (strlen($_POST['password']) < 6) {
+        $errors['password'] = "Harap Mengisi Lebih Dari 6 Karakter";
     }
+
     if (empty($_POST['re_password']) == TRUE) {
         $errors['re_password'] = "Harap Mengisi ulang password";
+    } elseif ($_POST['password'] != $_POST['re_password']) {
+        $errors['re_password'] = "Password Tidak Sama";
     }
 
 
     //insert
-    $email = htmlspecialchars($_POST['email']);
-    $password = htmlspecialchars($_POST['password']);
-    $re_password = htmlspecialchars($_POST['re_password']);
+    if (empty($errors)) {
+        $email = htmlspecialchars($_POST['email']);
+        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+        $simpan = mysqli_query($conn, "INSERT INTO users (email,password) VALUES('$email', '$password')");
+    }
 }
 
 

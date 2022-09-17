@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 //helper
 include 'app/function.php';
 
@@ -13,4 +14,3 @@ include "app/views.php";
 
 //footer
 include 'layouts/footer.php';
-?>
