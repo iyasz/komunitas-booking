@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 
@@ -21,7 +19,7 @@
     </style>
     <div class=" position-fixed top-0 start-0 end-0 navbar navbar-expand-lg text-bg-light shadow-sm">
         <div class="container ">
-            <a class="navbar-brand" href="index.php?page=beranda"><img class="img-fluid" src="<?= base_url() ?>/assets/img/logo/traveloka.svg" alt=""></a>
+            <a class="navbar-brand" href="<?= base_url()  ?>"><img class="img-fluid" src="<?= base_url() ?>/assets/img/logo/traveloka.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
