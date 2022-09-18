@@ -3,7 +3,6 @@
 // echo $_POST['email'];
 // echo $_SERVER['REQUEST_METHOD'];
 
-$error = [];
 
 
 // if (empty($email) or empty($password) or empty($re_password)) {
@@ -19,10 +18,9 @@ $errors = [
 if (isset($_POST['post_register'])) {
     // $_SERVER['REQUEST_METHOD'] == 'POST'
     $user = $conn->query("SELECT * FROM users WHERE email = '$_POST[email]'");
-    var_dump($user);
-    die;
 
-    //validation
+
+    //validation email
     if (empty($_POST['email']) == TRUE) {
         $errors['email'] = "Harap Mengisi Email";
     } elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == FALSE) {
@@ -31,12 +29,14 @@ if (isset($_POST['post_register'])) {
         $errors['email'] = "Email Sudah Digunakan";
     }
 
+    //validation password
     if (empty($_POST['password']) == TRUE) {
         $errors['password'] = "Harap Mengisi password";
     } elseif (strlen($_POST['password']) < 6) {
         $errors['password'] = "Harap Mengisi Lebih Dari 6 Karakter";
     }
 
+    //validation Re Password
     if (empty($_POST['re_password']) == TRUE) {
         $errors['re_password'] = "Harap Mengisi ulang password";
     } elseif ($_POST['password'] != $_POST['re_password']) {
@@ -50,6 +50,7 @@ if (isset($_POST['post_register'])) {
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
         $simpan = mysqli_query($conn, "INSERT INTO users (email,password) VALUES('$email', '$password')");
+        echo "<script>location.replace('index.php?page=login');</script>";
     }
 }
 
@@ -65,18 +66,18 @@ if (isset($_POST['post_register'])) {
                 <div class="card-body">
                     <h5 class="fw-600 mb-4">Gabung Jadi Member Travelokapala !</h5>
                     <form action="" method="post">
-                        <div class="mb-3">
+                        <div class="h-a">
                             <label for="email" class="">Email</label>
                             <input type="text" id="email" class="form-control <?= isset($errors['email']) ? 'is-invalid' : '' ?>" name="email" autocomplete="off" placeholder="example@gmail.com">
                             <div class="invalid-feedback"><?= $errors['email'] ?? ''; ?></div>
                         </div>
-                        <div class="mb-3">
-                            <label for="pw" class="form-label ">Password</label>
+                        <div class="h-a">
+                            <label for="pw" class="">Password</label>
                             <input type="password" id="pw" name="password" class="form-control <?= isset($errors['password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['password'] ?? ''; ?></div>
                         </div>
-                        <div class="mb-3">
-                            <label for="pww" class="form-label ">Confirm Password</label>
+                        <div class="h-a">
+                            <label for="pww" class="">Confirm Password</label>
                             <input type="password" id="pww" name="re_password" class="form-control <?= isset($errors['re_password']) ? 'is-invalid' : '' ?>">
                             <div class="invalid-feedback"><?= $errors['re_password'] ?? ''; ?></div>
                         </div>
