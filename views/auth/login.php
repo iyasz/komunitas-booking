@@ -5,6 +5,7 @@
                 <div class="card-body ">
                     <h2 class="fw-700 fs-2">Selamat Datang, <br>Travelfamily !</h2>
                     <h5 style="font-size: 14px;" class="fw-600 mb-4 mt-3 fs-text ">Petualangan baru telah menunggu <br>untuk kamu jelajahi</h5>
+                    <?php show_alert() ?>
                     <form action="" method="post">
                         <div class="mb-3 mx-1 ">
                             <div class="input-group">

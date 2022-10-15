@@ -56,9 +56,27 @@ if (isset($_POST['post_register'])) {
     if (empty($errors)) {
         $email = htmlspecialchars($_POST['email']);
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $email_token = md5(mt_rand());
+        $expired_token = time() + (60 * 30);
 
-        $simpan = mysqli_query($conn, "INSERT INTO users (email,password) VALUES('$email', '$password')");
-        echo "<script>location.replace('index.php?page=login');</script>";
+        $subject = "Email Verification | Traveloka";
+        $message = "
+        Selamat Datang Di Traveloka :3 <br><br>
+        Silahkan klik tautan dibawah ini untuk verifikasi akun kamu <br><br>
+        " . base_url() . "index.php?page=email_verify&token=" . $email_token;
+
+        $send = send_email("noreply@travelooka.com", "Traveloka", $email, $subject, $message);
+
+        if ($send == TRUE) {
+            $simpan = mysqli_query($conn, "INSERT INTO users (email,password, email_token,expired_token) VALUES('$email', '$password', '$email_token', '$expired_token')");
+
+            set_alert("alert_success", "Registrasi Berhasil SIlahkan cek email anda untuk melakukan verifikasi!");
+
+            echo "<script>location.replace('index.php?page=login');</script>";
+        } else {
+            var_dump($send);
+            die;
+        }
     }
 }
 
@@ -76,7 +94,7 @@ if (isset($_POST['post_register'])) {
                     <form action="" method="post">
                         <div class="h-a">
                             <label for="email" class="">Email</label>
-                            <input type="text" id="email" class="form-control <?= isset($errors['email']) ? 'is-invalid' : '' ?>" name="email" autocomplete="off" placeholder="example@gmail.com">
+                            <input type="text" id="email" class="form-control <?= isset($errors['email']) ? 'is-invalid' : '' ?>" name="email" autocomplete="off" placeholder="example@gmail.com" value="<?= $olds['email'] ?? ''; ?>">
                             <div class="invalid-feedback"><?= $errors['email'] ?? ''; ?></div>
                         </div>
                         <div class="h-a">

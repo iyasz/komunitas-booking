@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include 'db.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -36,11 +38,24 @@ function send_email($from, $from_name, $to, $subject, $message)
     $mail->Subject = $subject;
     $mail->Body = $message;
 
-    $mail->send();
-
     if ($mail->send()) {
-        echo "Email Terkirim";
+        return true;
     } else {
-        echo "Mailer Error: $mail->ErrorInfo";
+        return "Mailer Error: $mail->ErrorInfo";
     }
+}
+
+function set_alert($name, $message)
+{
+    $_SESSION[$name] = $message;
+    return true;
+}
+
+function show_alert()
+{
+    if (isset($_SESSION['alert_success'])) {
+        echo ' <div class="alert alert-info" role="alert">' .   $_SESSION['alert_success'] . '</div>';
+    }
+
+    session_destroy();
 }
