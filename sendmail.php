@@ -11,15 +11,15 @@ require 'assets/vendor/PHPMailer/src/SMTP.php';
 $mail = new PHPMailer(true);
 
 $mail->isSMTP();
-$mail->Host = "smtp@gmail.com";
+$mail->Host = "smtp.gmail.com";
 $mail->SMTPAuth = true;
 $mail->Username = "zakamaragames@gmail.com";
-$mail->Password = "";
-$mail->SMTPSecure = "ssl";
+$mail->Password = "cfxatavqrardcuhv";
+$mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 $mail->setFrom("noreply@treaveloka.com", "Traveloka");
-$mail->addAddress("zakamara@gmail.com");
+$mail->addAddress("zakamaragames@gmail.com");
 
 $mail->isHTML(true);
 

@@ -14,6 +14,7 @@ $errors = [
     // "re_password" => "Harap mengisi ulang password",
 ];
 
+$olds = [];
 
 if (isset($_POST['post_register'])) {
     // $_SERVER['REQUEST_METHOD'] == 'POST'
@@ -23,24 +24,31 @@ if (isset($_POST['post_register'])) {
     //validation email
     if (empty($_POST['email']) == TRUE) {
         $errors['email'] = "Harap Mengisi Email";
+        $olds['email'] = $_POST['email'];
     } elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == FALSE) {
         $errors['email'] = "Email Tidak Valid";
+        $olds['email'] = $_POST['email'];
     } elseif (mysqli_num_rows($user) > 0) {
         $errors['email'] = "Email Sudah Digunakan";
+        $olds['email'] = $_POST['email'];
     }
 
     //validation password
     if (empty($_POST['password']) == TRUE) {
         $errors['password'] = "Harap Mengisi password";
+        $olds['email'] = $_POST['email'];
     } elseif (strlen($_POST['password']) < 6) {
         $errors['password'] = "Harap Mengisi Lebih Dari 6 Karakter";
+        $olds['email'] = $_POST['email'];
     }
 
     //validation Re Password
     if (empty($_POST['re_password']) == TRUE) {
         $errors['re_password'] = "Harap Mengisi ulang password";
+        $olds['email'] = $_POST['email'];
     } elseif ($_POST['password'] != $_POST['re_password']) {
         $errors['re_password'] = "Password Tidak Sama";
+        $olds['email'] = $_POST['email'];
     }
 
 
