@@ -71,11 +71,12 @@ if (isset($_POST['post_register'])) {
             $simpan = mysqli_query($conn, "INSERT INTO users (email,password, email_token,expired_token) VALUES('$email', '$password', '$email_token', '$expired_token')");
 
             set_alert("alert_success", "Registrasi Berhasil SIlahkan cek email anda untuk melakukan verifikasi!");
-
             echo "<script>location.replace('index.php?page=login');</script>";
+            exit;
         } else {
-            var_dump($send);
-            die;
+            set_alert("alert_error", "Server sedang bermasalah, Silahkan lakukan pendaftaran ulang.");
+            echo "<script>location.replace('index.php?page=register');</script>";
+            exit;
         }
     }
 }
@@ -91,6 +92,7 @@ if (isset($_POST['post_register'])) {
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="fw-600 mb-4">Gabung Jadi Member Travelokapala !</h5>
+                    <?php show_alert() ?>
                     <form action="" method="post">
                         <div class="h-a">
                             <label for="email" class="">Email</label>

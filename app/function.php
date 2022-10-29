@@ -22,40 +22,49 @@ function send_email($from, $from_name, $to, $subject, $message)
     //script php mailer
     $mail = new PHPMailer(true);
 
-    $mail->isSMTP();
-    $mail->Host = "smtp.gmail.com";
-    $mail->SMTPAuth = true;
-    $mail->Username = "zakamaragames@gmail.com";
-    $mail->Password = "cfxatavqrardcuhv";
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    try {
 
-    $mail->setFrom($from, $from_name);
-    $mail->addAddress($to);
+        $mail->isSMTP();
+        $mail->Host = "smtp.gmail.com";
+        $mail->SMTPAuth = true;
+        $mail->Username = "zakamaragames@gmail.com";
+        $mail->Password = "cfxatavqrardcuhv";
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
-    $mail->isHTML(true);
+        $mail->setFrom($from, $from_name);
+        $mail->addAddress($to);
 
-    $mail->Subject = $subject;
-    $mail->Body = $message;
+        $mail->isHTML(true);
 
-    if ($mail->send()) {
+        $mail->Subject = $subject;
+        $mail->Body = $message;
+        $mail->send();
+
         return true;
-    } else {
-        return "Mailer Error: $mail->ErrorInfo";
+    } catch (Exception $e) {
+        return false;
     }
+
+
+    // if ($mail->send()) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
 }
 
 function set_alert($name, $message)
 {
     $_SESSION[$name] = $message;
-    return true;
+    // return true;
 }
 
 function show_alert()
 {
     if (isset($_SESSION['alert_success'])) {
         echo ' <div class="alert alert-info" role="alert">' .   $_SESSION['alert_success'] . '</div>';
+    } elseif (isset($_SESSION['alert_error'])) {
+        echo '<div class="alert alert-danger" role="alert">' . $_SESSION['alert_error'] . '</div>';
     }
-
-    session_destroy();
 }
