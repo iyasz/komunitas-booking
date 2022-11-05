@@ -17,7 +17,7 @@
             z-index: 3;
         }
     </style>
-    <div class=" position-fixed top-0 start-0 end-0 navbar navbar-expand-lg text-bg-light shadow-sm">
+    <div class="fixed-top navbar navbar-expand-lg navbar-dark  ">
         <div class="container ">
             <a class="navbar-brand" href="<?= base_url()  ?>"><img class="img-fluid" src="<?= base_url() ?>/assets/img/logo/traveloka.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
