@@ -5,10 +5,42 @@
     src: url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
 } */
 
+@font-face {
+  font-family: "philosopher bold";
+  src: url("../fonts/philosopher/Philosopher-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "philosopher";
+  src: url("../fonts/philosopher/Philosopher-Regular.ttf") format("truetype");
+}
+
+:root {
+  --color-primary: #0194f3;
+  --color-dark-primary: #007ce8;
+  --color-secondary: #FA6d01;
+  --color-dark: #333333;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   min-height: 1200px;
 }
+
+/* font family  */
+
+.ff-philosopher {
+  font-family: philosopher;
+}
+
+.ff-philosopher-bold {
+  font-family: philosopher bold;
+}
+
+/* end font family  */
+
+
+/* font weight  */
 
 .fw-300 {
   font-family: "Open Sans", sans-serif;
@@ -22,13 +54,21 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
+
+ /* end font weight  */
+
+ /* buttons  */
+
 .btn.btn-primary {
-  background-color: #0194f3 !important;
-  border-color: #0194f3 !important;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
 }
 .btn.btn-primary:hover {
-  background-color: #007ce8 !important;
+  background-color: var(--color-dark-primary) !important;
 }
+
+/* end buttons  */
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
