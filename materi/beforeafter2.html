@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .kotak {
+      width: 400px;
+      height: 300px;
+      position: relative;
+      background-color: aquamarine;
+      box-shadow: 10px 10px 60px rgb(60, 142, 154);
+      border-radius: 10px;
+    }
+    .kotak h1 {
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 90px;
+    }
+
+    .kotak h1::after {
+      content: "";
+      position: absolute;
+      right: 50%;
+      transform: translate(50%);
+      bottom: -10px;
+      width: 120px;
+      height: 5px;
+      background-color: red;
+      border-radius: 10px;
+    }
+  </style>
+  <body>
+    <div class="kotak">
+      <h1 id="anime">ANIME KAMU</h1>
+    </div>
+  </body>
+</html>
