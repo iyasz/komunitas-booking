@@ -176,24 +176,32 @@ body {
 
 /* swiper  */
 
-@media (width <= 576px) {
-  .swiper-slide img {
-    width: 100% !important;
-    height: 94% !important;
+@media (width < 768px) {
+  .title-location {
+    font-size: 16.6px !important;
+  }
+  .title-place {
+    font-size: 35px !important;
   }
 }
 
 @media (width >= 768px) {
-  .swiper-slide img {
-    width: 100% !important;
-    height: 100% !important;
+
+  .title-location {
+    font-size: 15px !important;
+  }
+  .title-place {
+    font-size: 27px !important;
   }
 }
 
 @media (width >= 992px) {
-  .swiper-slide img {
-    width: 100% !important;
-    height: 100% !important;
+
+  .title-location {
+    font-size: 12.9px !important;
+  }
+  .title-place {
+    font-size: 24px !important;
   }
 }
 
