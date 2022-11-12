@@ -268,7 +268,7 @@ body {
   bottom: 50px;
 }
 
-.swiper-wrapper .jpn::after{
+/* .swiper-wrapper .jpn::after{
   content: ' Fuji Mountain';
   position: absolute;
   font-size: 24px;
@@ -277,7 +277,7 @@ body {
   left: 18px;
   z-index: 4;
   bottom: 50px;
-}
+} */
 
 /* .swiper-wrapper .jpn::before{
   content: '\F3E8 ';

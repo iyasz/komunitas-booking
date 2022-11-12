@@ -24,26 +24,26 @@
                         <img src="assets/img/destination/fuji-japan.jpg" alt="img">
                     </div>
                     <div class="swiper-slide">
-                        <div class="title-place"></div>
-                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="title-place">Boat Village</div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Irlandia, Forkestan</div>
                         <div class="slider-backdrop"></div>
                         <img class="itali1" src="assets/img/destination/rialto_bridge-01.jpg" alt="img">
                     </div>
                     <div class="swiper-slide">
-                        <div class="title-place"></div>
-                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="title-place">Oneline Way</div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Skotlandia, Kanade</div>
                         <div class="slider-backdrop"></div>
                         <img class="itali2" src="assets/img/destination/rialto_bridge-02.JPG" alt="img">
                     </div>
                     <div class="swiper-slide">
-                        <div class="title-place"></div>
-                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="title-place">Bridge Charista</div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> New Zeland, Jogh</div>
                         <div class="slider-backdrop"></div>
                         <img class="itali3" src="assets/img/destination/rialto_bridge-italy.JPG" alt="img">
                     </div>
                     <div class="swiper-slide">
-                        <div class="title-place"></div>
-                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="title-place">Sea City</div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Swiss, Tremapure</div>
                         <div class="slider-backdrop"></div>
                         <img class="mountain" src="assets/img/destination/manarola-italy.jpg" alt="img">
                     </div>
