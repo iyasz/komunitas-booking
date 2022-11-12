@@ -149,32 +149,53 @@ body {
   font-size: 12px;
 }
 
-.title h2 {
+.title h1 {
   position: relative;
 }
 
-.title h2::before {
+.title h1::before {
   content: '';
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 40px;
-  height: 2.7px;
+  width: 60px;
+  height: 2.3px;
   border-radius: 10px;
   bottom: -10.7px;
 }
 
-.title h2::after {
+.title h1::after {
   content: '';
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 120px;
-  height: 2.7px;
+  width: 160px;
+  height: 2.3px;
   border-radius: 10px;
   left: 0;
   bottom: -19.7px;
 }
 
 /* swiper  */
+
+@media (width <= 576px) {
+  .swiper-slide img {
+    width: 100% !important;
+    height: 94% !important;
+  }
+}
+
+@media (width >= 768px) {
+  .swiper-slide img {
+    width: 100% !important;
+    height: 70% !important;
+  }
+}
+
+@media (width >= 992px) {
+  .swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
 
 .swiper {
   width: 100%;
@@ -207,6 +228,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 9px;
+  cursor: grabbing;
 }
 
 

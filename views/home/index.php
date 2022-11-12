@@ -9,19 +9,19 @@
 <div class="container py-5">
     <div class="row">
         <div class="title">
-            <h2 class="ff-philosopher-bold">Popular Destinations</h2>
+            <h1 class="ff-philosopher-bold">Popular Destinations</h1>
             <p class="text-muted mt-4">From historical natural, explore a beautiful place with us! </p>
         </div>
     </div>
-    <div class="row mt-3 position-relative">
-        <div class="col-lg-12">
+    <div class="row mt-lg-3 mt-md-2 mt-0">
+        <div class="col-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="assets/img/destination/fuji-japan.jpg" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/fuji-japan.jpg" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/fuji-japan.jpg" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/fuji-japan.jpg" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/fuji-japan.jpg" alt="img"></div>
+                    <div class="swiper-slide"><img src="assets/img/destination/rialto_bridge-01.jpg" alt="img"></div>
+                    <div class="swiper-slide"><img src="assets/img/destination/rialto_bridge-02.JPG" alt="img"></div>
+                    <div class="swiper-slide"><img src="assets/img/destination/rialto_bridge-italy.JPG" alt="img"></div>
+                    <div class="swiper-slide"><img src="assets/img/destination/manarola-italy.jpg" alt="img"></div>
                 </div>
             </div>
         </div>
