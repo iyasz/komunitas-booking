@@ -17,11 +17,36 @@
         <div class="col-12">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/img/destination/fuji-japan.jpg" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/rialto_bridge-01.jpg" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/rialto_bridge-02.JPG" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/rialto_bridge-italy.JPG" alt="img"></div>
-                    <div class="swiper-slide"><img src="assets/img/destination/manarola-italy.jpg" alt="img"></div>
+                    <div class="swiper-slide jpn">
+                        <div class="title-place">Fuji Mountain</div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="slider-backdrop"></div>
+                        <img src="assets/img/destination/fuji-japan.jpg" alt="img">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="title-place"></div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="slider-backdrop"></div>
+                        <img class="itali1" src="assets/img/destination/rialto_bridge-01.jpg" alt="img">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="title-place"></div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="slider-backdrop"></div>
+                        <img class="itali2" src="assets/img/destination/rialto_bridge-02.JPG" alt="img">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="title-place"></div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="slider-backdrop"></div>
+                        <img class="itali3" src="assets/img/destination/rialto_bridge-italy.JPG" alt="img">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="title-place"></div>
+                        <div class="title-location"><i class="bi bi-geo-alt"></i> Japan, Sakayanagi</div>
+                        <div class="slider-backdrop"></div>
+                        <img class="mountain" src="assets/img/destination/manarola-italy.jpg" alt="img">
+                    </div>
                 </div>
             </div>
         </div>
