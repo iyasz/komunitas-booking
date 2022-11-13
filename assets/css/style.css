@@ -228,8 +228,6 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  cursor: grabbing;
-
 }
 
 .swiper-slide img {
